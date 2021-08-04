@@ -1,7 +1,7 @@
 @use '../src/mixins';
 
 // ***********************************************
-// Specific FlexBox Classes
+// Specific Page Components
 
 .img-container-med
 {
@@ -50,5 +50,10 @@
 	img
 	{
 		height: 20vh;
+	}
+
+	a
+	{
+		color: black;
 	}
 }

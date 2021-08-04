@@ -1,25 +1,56 @@
 @use 'components/grid-layouts';
-@use './components/flex-components';
 @use 'components/navbar';
+@use './components/page-components';
 
 @use 'src/colors';
 @use 'src/mixins.scss';
-@use 'src/grid-templates';
+
+/*
+	Table of Contents:
+
+	* Settings
+		./components/_grid-layouts.scss
+
+	Grid Layouts
+		./components/_grid-layouts.scss
+		./components/_grid-templates.scss
+
+	Grid Cells
+		./components/_navbar.scss
+		// Grid General Cells
+
+	Page Components
+		./components/_page-components.scss
+
+	FlexBox Classes
+		./components/_page-components.scss
+		// Mindless FlexBox Classes
+			display classes
+			organize classes
+
+	Color Variables
+		./src/_colors.scss
+
+	Mixins
+		./src/_mixins.scss
+*/
 
 // ***************************************************
-// Grid Definitions
+// Grid Layouts
 
 @include grid-layouts.no-sidebar-hero();
 
 @include grid-layouts.sidebar();
 
-// Grid Definitions End
+@include grid-layouts.no-sidebar();
+
+// End Grid Layouts
 // ***************************************************
 
 @include navbar.navbar();
 
 // ***************************************************
-// General Use Cells:
+// Grid General Cells:
 .hero-cell
 {
 	grid-area: hero;
@@ -122,12 +153,13 @@
 	}
 }
 
-// End General Use Cells
+// End General Grid Cells
 // ***************************************************
 
 // ***********************************************
 // Mindless FlexBox Classes
 
+// display classes
 .flex
 {
 	display: flex;
@@ -143,7 +175,10 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 }
+// end display classes
 
+
+// organize classes
 .justify-space-between
 {
 	justify-content: space-between;
@@ -173,10 +208,10 @@
 {
 	align-self: flex-end;
 }
-
-
+// end organize classes
 // End Mindless FlexBox Classes
 // ***********************************************
+
 
 // ***********************************************
 // Mindless Classes

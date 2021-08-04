@@ -39,7 +39,39 @@
 .blog-preview img {
   height: 20vh;
 }
+.blog-preview a {
+  color: black;
+}
 
+/*
+	Table of Contents:
+
+	* Settings
+		./components/_grid-layouts.scss
+
+	Grid Layouts
+		./components/_grid-layouts.scss
+		./components/_grid-templates.scss
+
+	Grid Cells
+		./components/_navbar.scss
+		// Grid General Cells
+
+	Page Components
+		./components/_page-components.scss
+
+	FlexBox Classes
+		./components/_page-components.scss
+		// Mindless FlexBox Classes
+			display classes
+			organize classes
+
+	Color Variables
+		./src/_colors.scss
+
+	Mixins
+		./src/_mixins.scss
+*/
 .grid-container-index {
   margin-top: 10px;
   display: grid;
@@ -57,7 +89,7 @@
 .grid-container-sidebar {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 0.1rem minmax(5rem, 6rem) repeat(12, 1fr) 0.1rem;
+  grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
   grid-template-rows: 100px minmax(4rem, max-content) 1rem auto 200px;
   gap: 8px;
   grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
@@ -66,6 +98,20 @@
 @media only screen and (max-width: 900px) {
   .grid-container-sidebar {
     grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+.grid-container {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 1rem repeat(12, 1fr) 1rem;
+  grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
+  gap: 8px;
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav ." ". . content content content content content content content content content content . ." ". . content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+@media only screen and (max-width: 900px) {
+  .grid-container {
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }
 .nav-cell {
