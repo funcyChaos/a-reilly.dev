@@ -75,7 +75,7 @@
 {
 	h1
 	{
-		text-align: center;
+		// text-align: center;
 		font-size: 3rem;
 	}
 
@@ -94,5 +94,17 @@
 	.column:nth-child(3) p
 	{
 		margin: 1.2em 0;
+	}
+
+	input
+	{
+		height: 10rem;
+		width: 20rem;
+	}
+
+	button
+	{
+		background-color: #f0f;
+		width: 5rem;
 	}
 }

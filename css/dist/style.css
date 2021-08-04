@@ -215,7 +215,6 @@
 }
 
 .blog h1 {
-  text-align: center;
   font-size: 3rem;
 }
 .blog .flex {
@@ -228,6 +227,14 @@
 }
 .blog .column:nth-child(3) p {
   margin: 1.2em 0;
+}
+.blog input {
+  height: 10rem;
+  width: 20rem;
+}
+.blog button {
+  background-color: #f0f;
+  width: 5rem;
 }
 
 /*

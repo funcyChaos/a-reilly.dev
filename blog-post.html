@@ -96,7 +96,7 @@
 
 				<h1 class="mt-5">comments:</h1>
 
-				<div class="flex justify-center">
+				<div class="flex column align-items-center">
 					<div class="flex justify-space-between wrap comment border">
 						<div class="column">
 							<i class="far fa-user fa-3x"></i>
@@ -110,7 +110,14 @@
 							<a href="#">reply:</a>
 						</div>
 					</div>
+					<form class="flex column" action="text">
+						<label for="input">comment:</label>
+						<textarea name="comment" id="comment" cols="30" rows="10">
+						</textarea>
+						<button>&ltpost&gt</button>
+					</form>
 				</div>
+
 			</main>
 
 			<footer class="footer-cell">
