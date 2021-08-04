@@ -2,12 +2,12 @@
 // Index Page Template w/ Hero
 
 $hero-index:
-  ". nav nav nav nav nav nav nav nav nav nav nav nav ."
-	". hero hero hero hero hero hero hero hero hero hero hero hero ."
-	". . . . . . . . . . . . . ."
-	". . content content content content content content content content content content . ."
-	". . content content content content content content content content content content . ."
-	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+  ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
+	". hero hero hero hero hero hero hero hero hero hero hero hero hero ."
+	". . . . . . . . . . . . . . ."
+	". . content content content content content content content content content content content . ."
+	". . content content content content content content content content content content content . ."
+	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
 ;
 
 $mobile-hero-index:
@@ -40,16 +40,14 @@ $mobile-sidebar:
 // Page Template w/ No Sidebar
 
 $no-sidebar:
-  ". nav nav nav nav nav nav nav nav nav nav nav nav ."
-	". . content content content content content content content content content content . ."
-	". . content content content content content content content content content content . ."
-	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+  ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
+	". . content content content content content content content content content content content . ."
+	". . content content content content content content content content content content content . ."
+	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
 ;
 
 $mobile-no-sidebar:
   ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
-	". hero hero hero hero hero hero hero hero hero hero hero hero hero ."
-	". . . . . . . . . . . . . . ."
 	". content content content content content content content content content content content content content ."
 	". content content content content content content content content content content content content content ."
 	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"

@@ -1,4 +1,5 @@
 @use 'grid-templates';
+@use '../src/variables';
 
 // * Settings
 *
@@ -16,7 +17,7 @@
 
 	display: grid;
 
-	grid-template-columns: 1rem repeat(12, 1fr) 1rem;
+	grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
 
 	grid-template-rows: 100px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
 
@@ -25,11 +26,19 @@
 	grid-template-areas: grid-templates.$hero-index;
 }
 
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: variables.$large-breakpoint)
 {
 	.grid-container-index
 	{
 		grid-template-areas: grid-templates.$mobile-hero-index;
+	}
+}
+
+@media only screen and (max-width: variables.$small-breakpoint)
+{
+	.grid-container-index
+	{
+		grid-template-rows: 150px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
 	}
 }
 
@@ -53,11 +62,19 @@
 	grid-template-areas: grid-templates.$sidebar;
 }
 
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: variables.$large-breakpoint)
 {
 	.grid-container-sidebar
 	{
 		grid-template-areas: grid-templates.$mobile-sidebar;
+	}
+}
+
+@media only screen and (max-width: variables.$small-breakpoint)
+{
+	.grid-container-sidebar
+	{
+		grid-template-rows: 150px minmax(4rem, max-content)  auto 200px;
 	}
 }
 
@@ -79,10 +96,18 @@
 	grid-template-areas: grid-templates.$no-sidebar;
 }
 
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: variables.$large-breakpoint)
 {
 	.grid-container
 	{
-		grid-template-areas: grid-templates.$mobile-hero-index;
+		grid-template-areas: grid-templates.$mobile-no-sidebar;
+	}
+}
+
+@media only screen and (max-width: variables.$large-breakpoint)
+{
+	.grid-container
+	{
+		grid-template-rows: 150px minmax(4rem, max-content)  auto 200px;
 	}
 }

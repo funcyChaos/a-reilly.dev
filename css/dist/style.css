@@ -1,3 +1,8 @@
+:export {
+  largeBreakpoint: 600px;
+  smallBreakpoint: 430px;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -6,15 +11,20 @@
 .grid-container-index {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1rem repeat(12, 1fr) 1rem;
+  grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
   grid-template-rows: 100px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . ." ". . content content content content content content content content content content . ." ". . content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". . content content content content content content content content content content content . ." ". . content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
   .grid-container-index {
     grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+@media only screen and (max-width: 430px) {
+  .grid-container-index {
+    grid-template-rows: 150px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
   }
 }
 .grid-container-sidebar {
@@ -26,9 +36,14 @@
   grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
   .grid-container-sidebar {
     grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+@media only screen and (max-width: 430px) {
+  .grid-container-sidebar {
+    grid-template-rows: 150px minmax(4rem, max-content) auto 200px;
   }
 }
 .grid-container {
@@ -37,12 +52,17 @@
   grid-template-columns: 1rem repeat(12, 1fr) 1rem;
   grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav ." ". . content content content content content content content content content content . ." ". . content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . content content content content content content content content content content content . ." ". . content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
   .grid-container {
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  }
+}
+@media only screen and (max-width: 600px) {
+  .grid-container {
+    grid-template-rows: 150px minmax(4rem, max-content) auto 200px;
   }
 }
 .nav-cell {
@@ -106,15 +126,15 @@
   align-self: flex-end;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
   .menu {
     display: flex;
   }
 
   .nav-items {
     position: absolute;
-    right: 1rem;
-    top: 6.7rem;
+    right: 1.7rem;
+    top: 108px;
     padding: 8px;
     background-color: #07265F;
     border-radius: 0.25rem;
@@ -133,6 +153,12 @@
   }
 }
 @media only screen and (max-width: 430px) {
+  .nav-items {
+    position: absolute;
+    right: 1rem;
+    top: 158px;
+  }
+
   .nav-cell {
     flex-direction: column;
   }
@@ -212,8 +238,8 @@
 			display classes
 			organize classes
 
-	Color Variables
-		./src/_colors.scss
+	Variables
+		./src/_variables.scss
 
 	Mixins
 		./src/_mixins.scss
@@ -270,7 +296,7 @@
   color: black;
 }
 
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 600px) {
   .sidebar-cell {
     flex-direction: row;
     flex-wrap: wrap;

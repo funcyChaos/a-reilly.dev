@@ -2,7 +2,7 @@
 @use 'components/navbar';
 @use './components/page-components';
 
-@use 'src/colors';
+@use 'src/variables';
 @use 'src/mixins.scss';
 
 /*
@@ -28,8 +28,8 @@
 			display classes
 			organize classes
 
-	Color Variables
-		./src/_colors.scss
+	Variables
+		./src/_variables.scss
 
 	Mixins
 		./src/_mixins.scss
@@ -50,7 +50,7 @@
 
 	@include mixins.main-border();
 
-	background-color: colors.$second-color;
+	background-color: variables.$second-color;
 
 	padding: 4rem;
 	div
@@ -72,7 +72,7 @@
 
 	min-height: 100vh;
 
-	// background-color: colors.$main-color;
+	// background-color: variables.$main-color;
 
 	img
 	{
@@ -88,7 +88,7 @@
 	flex-direction: column;
 	justify-content: flex-start;
 
-	background-color: colors.$main-color;
+	background-color: variables.$main-color;
 	
 	padding: .5rem;
 	@include mixins.main-border();
@@ -110,7 +110,7 @@
 	}
 }
 
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: variables.$large-breakpoint)
 {
 	.sidebar-cell
 	{
@@ -131,7 +131,7 @@
 	align-items: center;
 
 	border-top: solid;
-	background-color: colors.$main-color;
+	background-color: variables.$main-color;
 	
 	i
 	{

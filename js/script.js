@@ -14,7 +14,7 @@ const navToggle = () =>
 
 window.addEventListener('resize', event =>
 {
-	if (window.innerWidth > 900)
+	if (window.innerWidth > 600)
 	{
 		document.getElementById('nav-id').classList.remove('hide');
 	}
