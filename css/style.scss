@@ -36,20 +36,6 @@
 */
 
 // ***************************************************
-// Grid Layouts
-
-@include grid-layouts.no-sidebar-hero();
-
-@include grid-layouts.sidebar();
-
-@include grid-layouts.no-sidebar();
-
-// End Grid Layouts
-// ***************************************************
-
-@include navbar.navbar();
-
-// ***************************************************
 // Grid General Cells:
 .hero-cell
 {

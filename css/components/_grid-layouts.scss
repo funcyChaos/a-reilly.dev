@@ -7,82 +7,82 @@
 	padding: 0;
 }
 
-@mixin no-sidebar-hero()
+// **************************************************************************************************************
+// Index Page Template w/ Hero
+
+.grid-container-index
+{
+	margin-top: 10px;
+
+	display: grid;
+
+	grid-template-columns: 1rem repeat(12, 1fr) 1rem;
+
+	grid-template-rows: 100px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
+
+	gap: 8px;
+
+	grid-template-areas: grid-templates.$hero-index;
+}
+
+@media only screen and (max-width: 900px)
 {
 	.grid-container-index
 	{
-		margin-top: 10px;
-	
-		display: grid;
-	
-		grid-template-columns: 1rem repeat(12, 1fr) 1rem;
-	
-		grid-template-rows: 100px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
-	
-		gap: 8px;
-	
-		grid-template-areas: grid-templates.$hero-index;
-	}
-	
-	@media only screen and (max-width: 900px)
-	{
-		.grid-container-index
-		{
-			grid-template-areas: grid-templates.$mobile-hero-index;
-		}
+		grid-template-areas: grid-templates.$mobile-hero-index;
 	}
 }
 
-@mixin sidebar()
+// **************************************************************************************************************
+// Page Template w/ Sidebar
+
+.grid-container-sidebar
+{
+	margin-top: 10px;
+
+	display: grid;
+
+	grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
+
+	grid-template-rows: 100px minmax(4rem, max-content)  auto 200px;
+	
+	
+
+	gap: 8px;
+
+	grid-template-areas: grid-templates.$sidebar;
+}
+
+@media only screen and (max-width: 900px)
 {
 	.grid-container-sidebar
 	{
-		margin-top: 10px;
-	
-		display: grid;
-	
-		grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
-	
-		grid-template-rows: 100px minmax(4rem, max-content) 1rem  auto 200px;
-		
-		
-	
-		gap: 8px;
-	
-		grid-template-areas: grid-templates.$sidebar;
-	}
-	
-	@media only screen and (max-width: 900px)
-	{
-		.grid-container-sidebar
-		{
-			grid-template-areas: grid-templates.$mobile-sidebar;
-		}
+		grid-template-areas: grid-templates.$mobile-sidebar;
 	}
 }
 
-@mixin no-sidebar()
+// **************************************************************************************************************
+// Page Template w/ No Sidebar
+
+.grid-container
+{
+	margin-top: 10px;
+
+	display: grid;
+
+	grid-template-columns: 1rem repeat(12, 1fr) 1rem;
+
+	grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
+
+	gap: 8px;
+
+	grid-template-areas: grid-templates.$no-sidebar;
+}
+
+@media only screen and (max-width: 900px)
 {
 	.grid-container
 	{
-		margin-top: 10px;
-	
-		display: grid;
-	
-		grid-template-columns: 1rem repeat(12, 1fr) 1rem;
-	
-		grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
-	
-		gap: 8px;
-	
-		grid-template-areas: grid-templates.$blog;
-	}
-	
-	@media only screen and (max-width: 900px)
-	{
-		.grid-container
-		{
-			grid-template-areas: grid-templates.$mobile-hero-index;
-		}
+		grid-template-areas: grid-templates.$mobile-hero-index;
 	}
 }

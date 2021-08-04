@@ -3,75 +3,6 @@
   padding: 0;
 }
 
-.img-container-med {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-self: flex-end;
-  width: 40%;
-  border-radius: 0.25rem;
-  box-shadow: 2px 2px 5px black;
-  background-color: black;
-}
-.img-container-med img {
-  border-radius: 0.25rem;
-}
-
-.blog-preview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 33vh;
-  margin-bottom: 1rem;
-  padding: 0.5rem 1rem 1rem 0;
-  text-align: center;
-  border: solid;
-  border-radius: 0.2rem;
-}
-.blog-preview .blog-excerpt {
-  padding: 1rem;
-  font-size: 1rem;
-}
-.blog-preview .blog-data {
-  font-size: 0.8rem;
-}
-.blog-preview img {
-  height: 20vh;
-}
-.blog-preview a {
-  color: black;
-}
-
-/*
-	Table of Contents:
-
-	* Settings
-		./components/_grid-layouts.scss
-
-	Grid Layouts
-		./components/_grid-layouts.scss
-		./components/_grid-templates.scss
-
-	Grid Cells
-		./components/_navbar.scss
-		// Grid General Cells
-
-	Page Components
-		./components/_page-components.scss
-
-	FlexBox Classes
-		./components/_page-components.scss
-		// Mindless FlexBox Classes
-			display classes
-			organize classes
-
-	Color Variables
-		./src/_colors.scss
-
-	Mixins
-		./src/_mixins.scss
-*/
 .grid-container-index {
   margin-top: 10px;
   display: grid;
@@ -90,14 +21,14 @@
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
-  grid-template-rows: 100px minmax(4rem, max-content) 1rem auto 200px;
+  grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 @media only screen and (max-width: 900px) {
   .grid-container-sidebar {
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }
 .grid-container {
@@ -215,6 +146,78 @@
   flex-wrap: wrap;
 }
 
+.img-container-med {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: flex-end;
+  width: 40%;
+  border-radius: 0.25rem;
+  box-shadow: 2px 2px 5px black;
+  background-color: black;
+}
+.img-container-med img {
+  border-radius: 0.25rem;
+}
+
+.blog-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 33vh;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem 1rem 0;
+  text-align: center;
+  border: solid;
+  border-radius: 0.2rem;
+}
+.blog-preview .blog-excerpt {
+  padding: 1rem;
+  font-size: 1rem;
+}
+.blog-preview .blog-data {
+  font-size: 0.8rem;
+}
+.blog-preview img {
+  height: 20vh;
+}
+.blog-preview a {
+  color: black;
+}
+.blog-preview h1 {
+  margin-bottom: 0.2rem;
+}
+
+/*
+	Table of Contents:
+
+	* Settings
+		./components/_grid-layouts.scss
+
+	Grid Layouts
+		./components/_grid-layouts.scss
+		./components/_grid-templates.scss
+
+	Grid Cells
+		./components/_navbar.scss
+		// Grid General Cells
+
+	Page Components
+		./components/_page-components.scss
+
+	FlexBox Classes
+		./components/_page-components.scss
+		// Mindless FlexBox Classes
+			display classes
+			organize classes
+
+	Color Variables
+		./src/_colors.scss
+
+	Mixins
+		./src/_mixins.scss
+*/
 .hero-cell {
   grid-area: hero;
   display: flex;

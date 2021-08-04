@@ -1,3 +1,6 @@
+// **************************************************************************************************************
+// Index Page Template w/ Hero
+
 $hero-index:
   ". nav nav nav nav nav nav nav nav nav nav nav nav ."
 	". hero hero hero hero hero hero hero hero hero hero hero hero ."
@@ -17,10 +20,10 @@ $mobile-hero-index:
 ;
 
 // **************************************************************************************************************
+// Page Template w/ Sidebar
 
 $sidebar:
   ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
-	". lcell lcell . content content content content content content content content content . ."
 	". lcell lcell . content content content content content content content content content . ."
 	". lcell lcell . content content content content content content content content content . ."
 	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
@@ -29,19 +32,21 @@ $sidebar:
 $mobile-sidebar:
   ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
 	". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ."
-	". . . . . . . . . . . . . . ."
 	". content content content content content content content content content content content content content ."
 	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
 ;
 
-$blog:
+// **************************************************************************************************************
+// Page Template w/ No Sidebar
+
+$no-sidebar:
   ". nav nav nav nav nav nav nav nav nav nav nav nav ."
 	". . content content content content content content content content content content . ."
 	". . content content content content content content content content content content . ."
 	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
 ;
 
-$mobile-blog:
+$mobile-no-sidebar:
   ". nav nav nav nav nav nav nav nav nav nav nav nav nav ."
 	". hero hero hero hero hero hero hero hero hero hero hero hero hero ."
 	". . . . . . . . . . . . . . ."
