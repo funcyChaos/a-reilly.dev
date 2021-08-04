@@ -1,27 +1,32 @@
 @use '../src/mixins';
+@use '../src/variables';
 
 // ***********************************************
 // Specific Page Components
 
-.img-container-med
+// For Groups Of Images
+.gallery
 {
 	display: flex;
-	flex-direction: column;
 	flex-wrap: wrap;
-	justify-content: center;
-	align-self: flex-end;
-	width: 40%;
-
-	border-radius: .25rem;
-	box-shadow: 2px 2px 5px black;
-	background-color: black;
 
 	img
 	{
-		border-radius: .25rem;
+		width: 20vw;
+
+		margin: 1rem;
 	}
 }
 
+@media only screen and (max-width: variables.$large-breakpoint)
+{
+	.gallery img
+	{
+		width: 35vw;
+	}
+}
+
+// For Blog Post Excerpts
 .blog-preview
 {
 	display: flex;
@@ -36,17 +41,20 @@
 	text-align: center;
 	@include mixins.main-border;
 
+	// The Excerpt Div
 	.blog-excerpt
 	{
 		padding: 1rem;
 		font-size: 1rem;
 	}
 
+	// The Data Div
 	.blog-data
 	{
 		font-size: .8rem;
 	}
 
+	// Misc
 	img
 	{
 		height: 20vh;
@@ -59,5 +67,32 @@
 	h1
 	{
 		margin-bottom: .2rem;
+	}
+}
+
+// Major Blog Container
+.blog
+{
+	h1
+	{
+		text-align: center;
+		font-size: 3rem;
+	}
+
+	.flex
+	{
+		margin-top: 1rem;
+	}
+
+	.comment
+	{
+		width: 20rem;
+		margin-bottom: 2rem;
+		padding: 1rem;
+	}
+
+	.column:nth-child(3) p
+	{
+		margin: 1.2em 0;
 	}
 }

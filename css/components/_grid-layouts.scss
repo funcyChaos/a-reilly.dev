@@ -81,7 +81,7 @@
 // **************************************************************************************************************
 // Page Template w/ No Sidebar
 
-.grid-container
+.grid-container-post
 {
 	margin-top: 10px;
 
@@ -93,14 +93,14 @@
 
 	gap: 8px;
 
-	grid-template-areas: grid-templates.$no-sidebar;
+	grid-template-areas: grid-templates.$post;
 }
 
 @media only screen and (max-width: variables.$large-breakpoint)
 {
 	.grid-container
 	{
-		grid-template-areas: grid-templates.$mobile-no-sidebar;
+		grid-template-areas: grid-templates.$mobile-post;
 	}
 }
 

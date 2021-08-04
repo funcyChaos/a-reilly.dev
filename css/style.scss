@@ -168,10 +168,21 @@
 	flex-direction: column;
 	flex-wrap: wrap;
 }
+
+.wrap
+{
+	flex-wrap: wrap;
+}
 // end display classes
 
 
 // organize classes
+
+.justify-center
+{
+	justify-content: center;
+}
+
 .justify-space-between
 {
 	justify-content: space-between;
@@ -209,7 +220,17 @@
 // ***********************************************
 // Mindless Classes
 
+.border
+{
+	@include mixins.main-border();
+}
+
 .p0
 {
 	padding: 0;
+}
+
+.mt-5
+{
+	margin-top: 5rem;
 }
