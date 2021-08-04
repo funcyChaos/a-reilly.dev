@@ -1,0 +1,30 @@
+@use '../src/grid-templates';
+
+@mixin index()
+{
+	.grid-container-index
+	{
+		margin-top: 10px;
+	
+		display: grid;
+	
+		grid-template-columns: .1rem 5rem repeat(12, 1fr) .1rem;
+	
+		grid-template-rows: 150px calc(100vh - 180px) 1rem minmax(4rem, max-content) auto 200px;
+	
+		gap: 8px;
+	
+		// Reference the grid-templates src file for each layout
+		// Peep the area specified in each cell class, these are correlated to the names in the quotes.
+		grid-template-areas: grid-templates.$hero-index;
+	}
+	
+	// Grid Media Queries:
+	@media only screen and (max-width: 900px)
+	{
+		.grid-container-index
+		{
+			grid-template-areas: grid-templates.$mobile-hero-index;
+		}
+	}
+}
