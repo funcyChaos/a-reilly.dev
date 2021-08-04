@@ -22,24 +22,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 50vh;
+  min-height: 33vh;
   margin-bottom: 1rem;
+  padding: 0.5rem 1rem 1rem 0;
   text-align: center;
   border: solid;
   border-radius: 0.2rem;
 }
 .blog-preview .blog-excerpt {
+  padding: 1rem;
   font-size: 1rem;
 }
 .blog-preview .blog-data {
   font-size: 0.8rem;
+}
+.blog-preview img {
+  height: 20vh;
 }
 
 .grid-container-index {
   margin-top: 10px;
   display: grid;
   grid-template-columns: 1rem repeat(12, 1fr) 1rem;
-  grid-template-rows: 100px calc(100vh - 180px) 1rem minmax(4rem, max-content) auto 200px;
+  grid-template-rows: 100px calc(100vh - 120px) 1rem minmax(4rem, max-content) auto 200px;
   gap: 8px;
   grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav ." ". hero hero hero hero hero hero hero hero hero hero hero hero ." ". . . . . . . . . . . . . ." ". . content content content content content content content content content content . ." ". . content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
@@ -53,14 +58,14 @@
   margin-top: 10px;
   display: grid;
   grid-template-columns: 0.1rem minmax(5rem, 6rem) repeat(12, 1fr) 0.1rem;
-  grid-template-rows: 150px minmax(4rem, max-content) calc(100vh - 100px) 1rem auto 200px;
+  grid-template-rows: 100px minmax(4rem, max-content) 1rem auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." ". lcell lcell . content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 @media only screen and (max-width: 900px) {
   .grid-container-sidebar {
-    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+    grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell lcell ." ". . . . . . . . . . . . . . ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }
 .nav-cell {
@@ -188,7 +193,6 @@
   justify-content: center;
   padding: 0.5rem;
   min-height: 100vh;
-  background-color: #07265F;
 }
 .main-content-cell img {
   border: solid;
@@ -235,10 +239,6 @@
 }
 .footer-cell i {
   color: white;
-}
-
-img {
-  width: 100%;
 }
 
 .flex {
