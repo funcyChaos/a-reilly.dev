@@ -49,10 +49,10 @@
 .grid-container {
   margin-top: 10px;
   display: grid;
-  grid-template-columns: 1rem repeat(12, 1fr) 1rem;
+  grid-template-columns: 1rem minmax(5rem, 6rem) repeat(12, 1fr) 1rem;
   grid-template-rows: 100px minmax(4rem, max-content) auto 200px;
   gap: 8px;
-  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . content content content content content content content content content content content . ." ". . content content content content content content content content content content content . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
+  grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". . . content content content content content content content content content . . ." ". . . content content content content content content content content content . . ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
 @media only screen and (max-width: 600px) {
@@ -60,7 +60,7 @@
     grid-template-areas: ". nav nav nav nav nav nav nav nav nav nav nav nav nav ." ". content content content content content content content content content content content content content ." ". content content content content content content content content content content content content content ." "footer footer footer footer footer footer footer footer footer footer footer footer footer footer footer";
   }
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 430px) {
   .grid-container {
     grid-template-rows: 150px minmax(4rem, max-content) auto 200px;
   }
@@ -228,6 +228,10 @@
 	Grid Cells
 		./components/_navbar.scss
 		// Grid General Cells
+			// Hero Cell
+			// Main Content Cell
+			// Side Bar Cell, Left
+			// Footer Cell
 
 	Page Components
 		./components/_page-components.scss
@@ -238,7 +242,7 @@
 			display classes
 			organize classes
 
-	Variables
+	Variables(Colors, Breakpoints, etc)
 		./src/_variables.scss
 
 	Mixins
@@ -265,7 +269,6 @@
 .main-content-cell {
   grid-area: content;
   display: flex;
-  justify-content: center;
   padding: 0.5rem;
   min-height: 100vh;
 }
@@ -326,7 +329,6 @@
 }
 
 .column {
-  display: flex;
   flex-direction: column;
   flex-wrap: wrap;
 }

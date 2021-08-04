@@ -18,6 +18,10 @@
 	Grid Cells
 		./components/_navbar.scss
 		// Grid General Cells
+			// Hero Cell
+			// Main Content Cell
+			// Side Bar Cell, Left
+			// Footer Cell
 
 	Page Components
 		./components/_page-components.scss
@@ -28,7 +32,7 @@
 			display classes
 			organize classes
 
-	Variables
+	Variables(Colors, Breakpoints, etc)
 		./src/_variables.scss
 
 	Mixins
@@ -37,6 +41,8 @@
 
 // ***************************************************
 // Grid General Cells:
+
+// Hero Cell
 .hero-cell
 {
 	grid-area: hero;
@@ -61,12 +67,12 @@
 	}
 }
 
+// Main Content Cell
 .main-content-cell
 {
 	grid-area: content;
 
 	display: flex;
-	justify-content: center;
 
 	padding: .5rem;
 
@@ -80,6 +86,7 @@
 	}
 }
 
+// Side Bar Cell, Left
 .sidebar-cell
 {
 	grid-area: lcell;
@@ -122,6 +129,7 @@
 	}
 }
 
+// Footer Cell
 .footer-cell
 {
 	grid-area: footer;
@@ -157,7 +165,6 @@
 }
 .column
 {
-	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
 }
