@@ -2,7 +2,7 @@ const navToggle = () =>
 {
 	const navBar = document.getElementById("nav-id");
 
-	if (navBar.className === "column nav-items")
+	if (navBar.className === "column-menu nav-items")
 	{
 			navBar.classList.add('hide')
 	}

@@ -25,23 +25,23 @@
 	</head>
 	
 	<body>
-		<div class="grid-container-index">
+		<div class="grid-container-sidebar">
 			<!-- NAV BAR -->
 			<nav class="nav-cell" id="nav-cell-change">
 				<!-- <i class="fab fa-github-alt fa-2x"></i> -->
 				<img src="/images/main-logo.png" alt="ar.d logo">
 				<h2>a-reilly.dev</h2>
-				<div class="column-menu nav-items" id="nav-id">
+				<div class="column nav-items" id="nav-id">
 					<form class="flex" action="search">
 						<input class="nav-form" type="text">
 						<button>&ltsearch&gt</button>
 					</form>
 					<ul>
 						<li>
-							<a href="index.html" class="current-nav">&lthome&gt</a>
+							<a href="index.html">&lthome&gt</a>
 						</li>
 						<li>
-							<a href="blog.html">&ltblog&gt</a>
+							<a href="blog.html" class="current-nav">&ltblog&gt</a>
 						</li>
 						<li>
 							<a href="#">&ltabout&gt</a>
@@ -57,26 +57,38 @@
 
 			</nav>
 
-
-			<!-- HERO IMAGE -->
-			<div class="hero-cell">
-				<h2>Why does Peter Pan always fly?</h2>
-				<div>
-					<h2 class="align-self-end">Because he never lands.</h2>
-					<h2 class="align-self-end">haha, that joke never gets old...</h2>
-				</div>
+			<div class="sidebar-cell" id="lcell">
+				<a href="">&ltmaking/hacking&gt</a>
+				<a href="">&lttrucks/cars&gt</a>
+				<a href="">&ltcoding&gt</a>
+				<a href="">&ltdrones&gt</a>
 			</div>
 
-			<main class="main-content-cell align-items-center justify-space-between">
-				<div class="column">
-					<p>Welcome to my domain!</p>
-	
-					<p>Here you can learn more about me and my different projects.</p>
-	
-					<p>Or maybe you’re just here to inspect my website code</p>
+			<main class="main-content-cell column justify-start p0">
+				<div class="blog-preview">
+					<div class="flex">
+						<h2>&ltthe-e30&gt</h2>
+					</div>
+					<div class="flex">
+						<div class="column justify-space-between">
+							<div class="blog-excerpt">
+								<p>
+									I’m going to try and keep this short, but the E30 was and is a long project that has a lot of work in it. When I got the car I just needed a car, and I was looking for just about anything. I was hanging out with my good friend at Recycled Toyotas, and… Continue reading
+								</p>
+							</div>
+							<div class="blog-data">
+								<p>Published:26.7.2021</p>
+								<p>Categorized:”Trucks/Cars”</p>
+								<p>Tags:cars,driftcar,motorswap,race car</p>
+							</div>
+						</div>
+						<div class="column">
+							<img src="/images/e30-drift-dirt.jpg" alt="">
+						</div>
+					</div>
 				</div>
-				<div class="column">
-					<img src="/images/hi-there.gif" alt="hi there">
+				<div class="blog-preview">
+					<h2>&ltbicycle-polo-project&gt</h2>
 				</div>
 			</main>
 

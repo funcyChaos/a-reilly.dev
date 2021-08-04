@@ -1,35 +1,7 @@
-.flex-row
-{
-	display: flex;
-	justify-content: space-around;
-}
+@use '../src/mixins';
 
-.flex
-{
-	display: flex;
-}
-
-.justify-self-end
-{
-	justify-self: flex-end;
-}
-
-.align-items-center
-{
-	align-items: center;
-}
-
-.align-self-end
-{
-	align-self: flex-end;
-}
-
-.column
-{
-	display: flex;
-	flex-direction: column;
-}
-
+// ***********************************************
+// Specific FlexBox Classes
 
 .img-container-med
 {
@@ -47,5 +19,28 @@
 	img
 	{
 		border-radius: .25rem;
+	}
+}
+
+.blog-preview
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 50vh;
+
+	margin-bottom: 1rem;
+
+	text-align: center;
+	@include mixins.main-border;
+
+	.blog-excerpt
+	{
+		font-size: 1rem;
+	}
+
+	.blog-data
+	{
+		font-size: .8rem;
 	}
 }
